@@ -1,0 +1,13 @@
+pr:
+  branches:
+    include:
+      - main
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+
+stages:
+  - template: build-stage.yml
