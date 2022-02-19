@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  demo.public.api:
+    image: ${DOCKER_REGISTRY-}demo/public.api
+    build:
+      context: .
+      dockerfile: src/Demo.Public.Api/Dockerfile
+
+  demo.readmodels.api:
+    image: ${DOCKER_REGISTRY-}demo/readmodels.api
+    build:
+      context: .
+      dockerfile: src/Demo.ReadModels.Api/Dockerfile
+
+  demo.writemodels.api:
+    image: ${DOCKER_REGISTRY-}demo/writemodels.api
+    build:
+      context: .
+      dockerfile: src/Demo.WriteModels.Api/Dockerfile
