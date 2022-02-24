@@ -7,6 +7,6 @@ namespace Demo.Common.Repository
     public interface IReadOnlyRepository<T> where T : class
     {
         Task<IReadOnlyList<T>> GetAllAsync();
-        Task<T> GetByIdAsync(long id);
+        Task<T> GetByIdAsync(Guid id);
     }
 }

@@ -7,7 +7,7 @@ namespace Demo.Common
 {
     public static class ModelManager
     {
-        private static JsonSerializerOptions _options = new JsonSerializerOptions { WriteIndented = true };
+        private static JsonSerializerOptions _options = new() { WriteIndented = true };
 
         public static T JsonToModel<T>(string json)
         {
@@ -16,7 +16,7 @@ namespace Demo.Common
 
         public static string ModelToJson<T>(T model)
         {
-            return JsonSerializer.Serialize<T>(model, _options);
+            return JsonSerializer.Serialize(model, _options);
         }
 
         public static T XmlToModel<T>(string objString)
